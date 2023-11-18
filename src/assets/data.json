@@ -1,0 +1,16 @@
+{
+  "airlines": [
+    {
+      "name": "Cebu Pacific",
+      "logo": ""
+    },
+    {
+        "name": "Philippine Airlines",
+        "logo": ""
+    },
+    {
+        "name": "Air Asia",
+        "logo": ""
+    }
+  ]
+}

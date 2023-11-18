@@ -4,6 +4,9 @@ import { generatePDF } from "./helpers/generate_pdf";
 
 function App() {
   const [form, setForm] = useState({
+    addr_1: "",
+    addr_2: "",
+    addr_3: "",
     name: "",
     email: "",
     destination: "",
@@ -33,6 +36,67 @@ function App() {
   return (
     <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
       <form onSubmit={handleSubmit} className="w-full max-w-sm">
+      <h2 className="text-xl font-bold mb-4">My Address</h2>
+      <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
+            <label
+              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              htmlFor="addr_1"
+            >
+              Address 1
+            </label>
+          </div>
+          <div className="md:w-2/3">
+            <input
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="addr_1"
+              type="text"
+              name="addr_1"
+              value={form.addr_1}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
+            <label
+              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              htmlFor="addr_2"
+            >
+              Address 2
+            </label>
+          </div>
+          <div className="md:w-2/3">
+            <input
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="addr_2"
+              type="text"
+              name="addr_2"
+              value={form.addr_2}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className="md:flex md:items-center mb-6">
+          <div className="md:w-1/3">
+            <label
+              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              htmlFor="addr_3"
+            >
+              Address 3
+            </label>
+          </div>
+          <div className="md:w-2/3">
+            <input
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              id="addr_3"
+              type="text"
+              name="addr_3"
+              value={form.addr_3}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
       <h2 className="text-xl font-bold mb-4">Customer Information</h2>
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">

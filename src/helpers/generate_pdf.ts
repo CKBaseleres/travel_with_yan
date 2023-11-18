@@ -7,14 +7,14 @@ export const generatePDF = (form: any) => {
 
     // Top Left Part
     doc.setFontSize(9);
-    doc.text("Company Address 1", 10, 10);
-    doc.text("Company Address 2", 10, 13);
-    doc.text("Company Address 3", 10, 16);
+    doc.text(form.addr_1, 10, 10);
+    doc.text(form.addr_2, 10, 13);
+    doc.text(form.addr_3, 10, 16);
     // END OF Top Left Part
 
     // Top Right Part
-    doc.setFontSize(12);
-    doc.text("Add Logo Here", 170, 13);
+    // doc.setFontSize(12);
+    // doc.text("Add Logo Here", 170, 13);
     // END OF Top Right Part
 
     // Receipt Text
@@ -100,5 +100,5 @@ export const generatePDF = (form: any) => {
     // doc.text(`Destination: ${form.destination}`, 10, 60);
     // doc.text(`Travelers: ${form.travelers}`, 10, 70);
 
-    doc.save(`${form.name}-${form.booking_no}.pdf`);
+    doc.save(`${form.name}-${form.booking_id}.pdf`);
 }
