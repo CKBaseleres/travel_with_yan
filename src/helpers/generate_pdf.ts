@@ -90,7 +90,7 @@ export const generatePDF = (form: any) => {
     doc.text(`PHP ${(parseFloat(form.base_fare)*.12).toString()}`, 150, 151);
 
     doc.text("Total Charge", 12, 161);
-    doc.text(`PHP ${form.base_fare+(parseFloat(form.base_fare)*.12)}`, 150, 161);
+    doc.text(`PHP ${parseFloat(form.base_fare)+(parseFloat(form.base_fare)*.12)}`, 150, 161);
     // END OF Payment Confirmation Section
 
     doc.text("This receipt is automatically generated, no signature is required.", 10, 180)
